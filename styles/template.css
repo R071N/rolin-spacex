@@ -1,0 +1,292 @@
+/*-----1. Сброс CSS(START)-----*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*-----1. Сброс CSS(END)-----*/
+
+/*-----2. Типовые элементы(START)-----*/
+
+body {
+    font-family: 'MuseoSansCyrl', sans-serif;
+    background-color: white;
+    background-image: url(../image/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/*-----2. Типовые элементы(END)-----*/
+
+/*-----2.1 Бургер меню(START)-----*/
+
+.burger {
+    position: relative;
+    display: none;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 23px;
+    background-color: transparent;
+}
+
+.burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.burger::after {
+    top: auto;
+    bottom: 0;
+}
+
+/*-----2.1 Бургер меню(END)-----*/
+
+/*-----3 HEADER(START)-----*/
+
+.header {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header__logo {
+    outline-offset: -1px;
+    outline: 1px solid rgba(128, 128, 128, 0.219);
+    z-index: 1;
+}
+
+.logo {
+    position: relative;
+    z-index: 10;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav__item {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.nav__link {
+    padding: 10px 0;
+    transition: color 0.4s ease, border 0.4s ease;
+}
+
+.nav__link:hover {
+    color: gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: -1px;
+}
+
+.nav__link:focus {
+    color: gray;
+}
+
+.nav__link:active {
+    color: rgb(63, 63, 63);
+}
+
+/*-----3 HEADER(END)-----*/
+
+/*-----4 MAIN(START)-----*/
+
+.main {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    position: relative;
+}
+
+.main__image {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 33%;
+}
+
+/*-----4.1 Левый блок(START)-----*/
+
+.block-left {
+    padding: 80px 0;
+}
+
+#canvas {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: 0;
+    right: 0;
+}
+
+.title {
+    margin: 0;
+    font-size: 25px;
+    line-height: 45px;
+    background: linear-gradient(92deg, #FFF, #d83200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+}
+
+.title__desc {
+    font-size: 57px;
+    white-space: nowrap;
+}
+
+/*-----4.1 Левый блок(END)-----*/
+
+/*-----4.2 Кнопка(START)-----*/
+
+.button {
+    position: relative;
+    padding: 6px 23px;
+    margin-top: 75px;
+    background: none;
+    font-size: 14px;
+    border: 1px solid blue;
+    border-image: linear-gradient(171deg, #011f3a 10%, #023fa8 47%, #011f3a 100%, #023fa8 100%);
+    border-image-slice: 2;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+    transition: color 0.4s ease;
+}
+
+.button:hover {
+    color: gray;
+}
+
+.button:focus {
+    color: gray;
+}
+
+.button:active {
+    color: rgb(88, 88, 88);
+}
+
+/*-----4.2 Кнопка(END)-----*/
+
+/*-----4.3 Правый блок(START)-----*/
+
+.block-right {
+    padding: 10px 0;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    text-align: center;
+}
+
+.block-right__item {
+    padding: 20px 0 20px 50px;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: transparent;
+    transition: border 0.5s ease;
+}
+
+.block-right__item1:hover {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.block-right__item2:hover {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.block-right__item3:hover {
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.block-right__item4:hover {
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+
+.block-right__item1 {
+    background: linear-gradient(135deg, transparent 60%, rgba(255, 255, 255, 0.070));
+}
+
+.block-right__item2 {
+    background: linear-gradient(225deg, transparent 60%, rgba(255, 255, 255, 0.070));
+}
+
+.block-right__item3 {
+    background: linear-gradient(45deg, transparent 60%, rgba(255, 255, 255, 0.070));
+}
+
+.block-right__item4 {
+    background: linear-gradient(-45deg, transparent 60%, rgba(255, 255, 255, 0.070));
+}
+
+.block-right__text {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.block-right__number {
+    margin-top: 25px;
+    font-size: 60px;
+    font-family: 'MuseoSansCyrl';
+    line-height: 1;
+    word-spacing: -15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.block-right__desc {
+    font-size: 16px;
+}
+
+/*-----4.3 Правый блок(END)-----*/
+
+/*-----4 MAIN(END)-----*/
